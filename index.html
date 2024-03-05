@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bill</title>
+   
+    <link rel="stylesheet" href="bill.css">
+</head>
+<body>
+    
+    <Center>
+    <header>
+    <h3><b>SHUBH SHREE DIAMOND COLLECTION</b></h3>
+    <hr>
+    <h4> 13-B, Amrakunj Colony, Airport Road, Indore (M.P.)- 452005</h4>
+    <hr>
+    <h4><pre> Hukam - 9981960470                  Shubham - 8360187635</pre></h4>
+    <hr>
+    <div class="info">
+    <table class="table1" id="table1">
+    <tr>
+        <th>Mr./Ms.</th> 
+        <th><input type="text" name='cusname'> </th>
+        <th>Date</th> 
+        <th><input type="date" class="Nobdr" name='billdate' id='billdate'> </th>
+    </tr>
+    </table>
+    </div>
+    <div class="container">
+        <div id="data">
+           
+            <input type="text" id="itemtype" placeholder="item variety" width="70px">
+            <input type="number" id="box" placeholder="BOX">
+            <input type="number" id="qty" placeholder="Quantity">
+            <input type="number" id="rate" placeholder="Rate">
+            
+            <button onclick="callBothFunction()">Add</button>
+        </div>
+    </div>
+    <table class='mytable' id="mytable" width="464.84px">
+        <tr>
+            <th>Sc No.</th>
+            <th>Item Variety</th>
+            <th>box</th>
+            <th>qty</th>
+            <th>rate</th>
+            <th>amount</th>
+        </tr>
+    </table>
+
+    <span id="val" ></span>
+    <table class="table3" id="table3" width="464.84px">
+        <tr>
+            <th>Total</th>
+            
+            <th><p id="total"></p></th>
+        </tr>
+    </table>
+    
+    
+    </header>
+    </Center>
+    <script src="script.js"></script>
+</body>
+</html>

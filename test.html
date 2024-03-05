@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Column Total</title>
+  <script>
+    function calculateTotal() {
+      // Get all the cells in the column (replace '2' with the actual column index)
+     // var cells = document.querySelectorAll('table tr td:nth-child(2)');
+      var cells = document.querySelectorAll('.mytable1 tr:not(:first-child) td:nth-child(2)');
+      var total = 0;
+
+      // Loop through each cell and add its value to the total
+      cells.forEach(function(cell) {
+        total += parseFloat(cell.innerText) || 0;
+      });
+
+      // Display the total in an element with the id "total"
+      document.getElementById('total').innerText = 'Total: ' + total;
+    }
+  </script>
+</head>
+<body>
+
+<table class="mytable1" border="1">
+  <tr>
+    <th>1</th>
+    <th>5</th>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+</table>
+
+<button onclick="calculateTotal()">Calculate Total</button>
+
+<p id="total"></p>
+
+</body>
+</html>
