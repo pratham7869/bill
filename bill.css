@@ -20,13 +20,6 @@ th,td{
 h3{
     margin-bottom: 20px;
 }
-table {
-   
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .data mytable{
    
     align-items: center;
@@ -34,6 +27,15 @@ table {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-input{
-   
+
+@media print {
+    .hide
+    {
+        display: none;
+    }
+    
+}
+table,tr,th,td{
+    height: 1px;
+    text-size-adjust: 20px;
 }
