@@ -17,6 +17,10 @@ th,td{
     padding: 10px;
     width: 90px;
 }
+#table1{
+    /* width: fit-content; */
+    border: 0px;
+}
 h3{
     margin-bottom: 20px;
 }
@@ -27,13 +31,34 @@ h3{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
+#billdate{
+    border: none;
+}
 @media print {
+
+    body{
+        background-color: none;
+    }
     .hide
     {
         display: none;
     }
-    
+    .cus{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 200px;
+        background-color: none;
+        font-size: large;
+
+        
+    }
+    #table1{
+        /* width: fit-content; */
+        border: none;
+        border-right: none;
+        border-left: none;
+    }
 }
 table,tr,th,td{
     height: 1px;

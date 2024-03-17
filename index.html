@@ -13,11 +13,17 @@
     <header>
     <h2><b>SHUBH SHREE DIAMOND COLLECTION</b></h2>
     <hr>
- 
+     
    
     <div class="hide" id="data" class="container">
 
-            <input type="text" id="itemtype" placeholder="item variety" width="70px">
+            <input type="text"  id="itemtype" placeholder="item variety"  list='item'  width="70px">
+            <datalist id='item'>
+                <option value='tops' >tops</option>
+                <option value='bali' >bali</option>
+                <option value='jhumki' >jhumki</option>
+            </datalist>
+
             <input type="number" id="box" placeholder="BOX">
             <input type="number" id="qty" placeholder="Quantity">
             <input type="number" id="rate" placeholder="Rate">
@@ -25,13 +31,23 @@
             <button onclick="callBothFunction()">Add</button>
        
     </div>
+
+    <div class="hide" id="data" class="container">
+
+        <input type="number" id="gst" placeholder="GST">
+        <input type="number" id="bhada" placeholder="BHADA">
+        <input type="number" id="discount" placeholder="Discount">
+   
+    </div>
+
     <div class="info" height="800px">
         <table class="table1" id="table1">
         <tr>
             <th>श्रीमान/श्रीमती</th> 
-            <th><input type="text" name='cusname'> </th>
+            <th id="thp" style="display:none;" ></th>
+            <th class="hide"><input class="hide" id="cus" type="text" name='cusname'> </th>
             <th>Date</th> 
-            <th><input type="date" class="Nobdr" name='billdate' id='billdate'> </th>
+            <th><input type="date" class="Nobdr cus" name='billdate' id='billdate'> </th>
         </tr>
         </table>
         </div>
@@ -49,8 +65,9 @@
     <span id="val" ></span>
     <table class="hide" class="mytable" id="table3" hieght="50px" width="800px">
         <tr>
-            <th>कुल</th>
             
+            <th><p id="tbox"></p></th>
+            <th><p id="tqty"></p></th>
             <th><p id="total"></p></th>
         </tr>
        

@@ -13,27 +13,74 @@ function callBothFunction() {
 }
 
 function calculateTotal() {
-    var table= document.getElementById("mytable"), sumVal=0;
+    var table= document.getElementById("mytable");
+    var sumVal=0; 
+    var sumbox=0;
+    var sumqty=0; 
+
     for (var i=1; i<table.rows.length; i++){
         sumVal = sumVal + parseFloat(table.rows[i].cells[5].innerHTML);
     }
-    // Display the total in an element with the id "total"
-    document.getElementById('total').innerText = sumVal;
+    
+    for (var i=1; i<table.rows.length; i++){
+        sumbox = sumbox + parseFloat(table.rows[i].cells[2].innerHTML);
+    }
+   
+    for (var i=1; i<table.rows.length; i++){
+        sumqty = sumqty + parseFloat(table.rows[i].cells[3].innerHTML);
+    }
+    
+    document.getElementById('tbox').innerText ="" + sumbox + " box";
+    document.getElementById('tqty').innerText ="" + sumqty + " pcs";
+   // Display the total in an element with the id "total"
+    document.getElementById('total').innerText = sumVal;  
 }
 function sumPrint() {
-    var table= document.getElementById("mytable"), sumVal=0;
+    var table= document.getElementById("mytable");
+    var sumVal=0; 
+    var sumbox = 0;
+    var sumqty = 0;
+
+
+    document.getElementById('thp').style.display="block";
+    document.getElementById('thp').style.height="27px";
+    document.getElementById('thp').innerText = document.getElementById('cus').value;
+
+
+  //<p id="cusp" ></p>
+
     for (var i=1; i<table.rows.length; i++){
         sumVal = sumVal + parseFloat(table.rows[i].cells[5].innerHTML);
     }
+    for (var i=1; i<table.rows.length; i++){
+        sumbox = sumbox + parseFloat(table.rows[i].cells[2].innerHTML);
+    }
+    for (var i=1; i<table.rows.length; i++){
+        sumqty = sumqty + parseFloat(table.rows[i].cells[3].innerHTML);
+    }
 
-    let template = '<tr><th> </th> <th> </th> <th>Total Box </th> <th> total nag </th> <th>कुल</th> <th>'+sumVal+'</th></tr>';
+    let template = '<tr><th> </th> <th> </th> <th>'+sumbox+'  बाक्स </th> <th>'+sumqty+' नग</th> <th>कुल</th> <th>'+sumVal+'</th></tr>';
+    table.innerHTML += template;
+    
+    var disc= document.getElementById("discount").value;
+    var discper = sumVal * disc / 100; 
+    template = '<tr><th colspan=\'4\'>discount</th><th>-'+disc+' %</th><th> -'+discper+' </th></tr>';
+    table.innerHTML += template;
+    
+    var afdisc = parseFloat(sumVal - discper) ;
+    template = '<tr><th colspan=\'5\'></th><th> '+afdisc +' </th></tr>';
     table.innerHTML += template;
 
-    template = '<tr><th colspan=\'5\'>GST</th><th>'+sumVal+'</th></tr>';
+    var bhada=  parseFloat(document.getElementById("bhada").value);
+    template = '<tr><th colspan=\'5\'>भाड़ा</th><th>'+bhada+'</th></tr>';
+    table.innerHTML += template;
+    
+    var gst=  parseFloat(document.getElementById("gst").value);
+    template = '<tr><th colspan=\'5\'>GST</th><th>'+gst+'</th></tr>';
     table.innerHTML += template;
 
-    template = '<tr><th colspan=\'5\'>भाड़ा</th><th>'+sumVal+'</th></tr>';
-    table.innerHTML += template;
+
+    sumVal = afdisc + gst + bhada ;
 
     template = '<tr><th colspan=\'5\'>कुल योग</th><th>'+sumVal+'</th></tr>';
     table.innerHTML += template;
