@@ -68,21 +68,21 @@ function sumPrint() {
     table.innerHTML += template;
     
     var afdisc = parseFloat(sumVal - discper) ;
-    template = '<tr><th colspan=\'5\'></th><th> '+afdisc +' </th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\"></th><th> '+afdisc +' </th></tr>';
     table.innerHTML += template;
 
     var bhada=  parseFloat(document.getElementById("bhada").value);
-    template = '<tr><th colspan=\'5\'>भाड़ा</th><th>'+bhada+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">packaging</th><th>'+bhada+'</th></tr>';
     table.innerHTML += template;
     
     var gst=  parseFloat(document.getElementById("gst").value);
-    template = '<tr><th colspan=\'5\'>GST</th><th>'+gst+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">GST</th><th>'+gst+'</th></tr>';
     table.innerHTML += template;
 
 
     sumVal = afdisc + gst + bhada ;
 
-    template = '<tr><th colspan=\'5\'>कुल योग</th><th>'+sumVal+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">कुल योग</th><th>'+sumVal+'</th></tr>';
     table.innerHTML += template;
 
     template = '<tr><th colspan=\'6\'>Thanks, Please visit again </th></tr>';
@@ -96,13 +96,14 @@ function printFun() {
 }
 
 function btnClick() {
+
 let scno = document.getElementById("mytable").rows.length;
 let itemtype = input2.value;
 let box = input3.value;
 let qty = input4.value;
 let rate = input5.value;
 let amount = rate * qty;
-let template = '<tr><td>'+scno+'</td> <td>'+itemtype+'</td> <td>'+box+'</td> <td>'+qty+'</td> <td>'+rate+'</td> <td>'+amount+'</td></tr>';
+let template = '<tr><th>'+scno+'</th> <th>'+itemtype+'</th> <th>'+box+'</th> <th>'+qty+'</th> <th>'+rate+'</th> <th>'+amount+'</th></tr>';
 
 table.innerHTML += template;
 }
