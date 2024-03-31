@@ -103,7 +103,12 @@ let box = input3.value;
 let qty = input4.value;
 let rate = input5.value;
 let amount = rate * qty;
-let template = '<tr><th>'+scno+'</th> <th>'+itemtype+'</th> <th>'+box+'</th> <th>'+qty+'</th> <th>'+rate+'</th> <th>'+amount+'</th></tr>';
+let template = '<tr><th>'+scno+'</th> <th>'+itemtype+'</th> <th>'+box+'</th> <th>'+qty+'</th> <th>'+rate+'</th> <th>'+amount+'</th><td class="hide"><button onclick="deleteRow(this)" class="hide">Delete</button></td></tr>';
 
 table.innerHTML += template;
+}
+
+function deleteRow(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
 }
