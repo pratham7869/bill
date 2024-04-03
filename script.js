@@ -45,7 +45,7 @@ function sumPrint() {
     document.getElementById('thp').style.display="block";
     document.getElementById('thp').style.height="27px";
     document.getElementById('thp').innerText = document.getElementById('cus').value;
-
+    document.getElementById('thp').style.color= "indigo";
 
   //<p id="cusp" ></p>
 
@@ -82,7 +82,7 @@ function sumPrint() {
 
     sumVal = afdisc + gst + bhada ;
 
-    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">कुल योग</th><th>'+sumVal+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">कुल योग</th><th style=\"color: indigo\">'+sumVal+'</th></tr>';
     table.innerHTML += template;
 
     template = '<tr><th colspan=\'6\'>Thanks, Please visit again </th></tr>';
