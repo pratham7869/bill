@@ -42,10 +42,12 @@ function sumPrint() {
     var sumqty = 0;
 
 
-    document.getElementById('thp').style.display="block";
+    document.getElementById('thp').style.display="inline";
     document.getElementById('thp').style.height="27px";
     document.getElementById('thp').innerText = document.getElementById('cus').value;
-    document.getElementById('thp').style.color= "indigo";
+    document.getElementById('thp').style.color= "red";
+    document.getElementById('thp').style.fontSize="20px";
+    document.getElementById('thp').style.border="0px";
 
   //<p id="cusp" ></p>
 
@@ -59,30 +61,30 @@ function sumPrint() {
         sumqty = sumqty + parseFloat(table.rows[i].cells[3].innerHTML);
     }
 
-    let template = '<tr><th> </th> <th> </th> <th>'+sumbox+'  बाक्स </th> <th>'+sumqty+' नग</th> <th>कुल</th> <th>'+sumVal+'</th></tr>';
+    let template = '<tr><th> </th> <th> </th> <th>'+sumbox+'  बाक्स </th> <th>'+sumqty+' नग</th> <th>कुल</th> <th style=\"color: red\">'+sumVal+'</th></tr>';
     table.innerHTML += template;
     
     var disc= document.getElementById("discount").value;
     var discper = sumVal * disc / 100; 
-    template = '<tr><th colspan=\'4\'>discount</th><th>-'+disc+' %</th><th> -'+discper+' </th></tr>';
+    template = '<tr><th colspan=\'4\'>discount</th><th>-'+disc+' %</th><th style=\"color: red\"> -'+discper+' </th></tr>';
     table.innerHTML += template;
     
     var afdisc = parseFloat(sumVal - discper) ;
-    template = '<tr><th colspan=\'5\' style=\"text-align: right;\"></th><th> '+afdisc +' </th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\"></th><th style=\"color: red\"> '+afdisc +' </th></tr>';
     table.innerHTML += template;
 
     var bhada=  parseFloat(document.getElementById("bhada").value);
-    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">packaging</th><th>'+bhada+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">packaging</th><th style=\"color: red\">'+bhada+'</th></tr>';
     table.innerHTML += template;
     
     var gst=  parseFloat(document.getElementById("gst").value);
-    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">GST</th><th>'+gst+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">GST</th><th style=\"color: red\">'+gst+'</th></tr>';
     table.innerHTML += template;
 
 
     sumVal = afdisc + gst + bhada ;
 
-    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">कुल योग</th><th style=\"color: indigo\">'+sumVal+'</th></tr>';
+    template = '<tr><th colspan=\'5\' style=\"text-align: right;\">कुल योग</th><th style=\"color: red\">'+sumVal+'</th></tr>';
     table.innerHTML += template;
 
     template = '<tr><th colspan=\'6\'>Thanks, Please visit again </th></tr>';
