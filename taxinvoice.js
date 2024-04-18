@@ -15,6 +15,9 @@ const datecell = document.getElementById('datecell');
 const currdate = new Date();
 datecell.innerHTML= currdate.toLocaleDateString();
 
+let invnumber = localStorage.getItem('invoiceNumber');
+document.getElementById('invoicenumber').innerText ="2425-00" + invnumber;
+
 function callBothFunction() {
     btnClick();
     calculateTotal();

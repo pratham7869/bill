@@ -7,6 +7,8 @@ let input2 = document.getElementById('itemtype');
 let input3 = document.getElementById('box');
 let input4 = document.getElementById('qty');
 let input5 = document.getElementById('rate');
+
+
 function callBothFunction() {
     btnClick();
     calculateTotal();
