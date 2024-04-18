@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 Mar, 2024, 28 Mar, 2024 7:15:19 PM
+    Author     : pratham joya
+*/
+table{
+    width: 800px;
+}
+#mytable{
+    width: 800px;
+}
+#bo1{
+    width: 100px;
+}
+#col1{
+    width: 100px;
+}
+.gst{
+    width: 80px;
+}
+.compress{
+    width: 420px;
+}
+.compress1{
+    width: 120px;
+}
+#col2{
+    width: 200px;
+}
+.col2{
+    width: 50px;
+}
+#col3{
+    width: 125px;
+}
+#sidecol{
+    vertical-align: top;
+}
+/* #pname{
+    width: 250px;
+} */
+/* #GSTIN{
+    color: white;
+    background-color: darkblue;
+} */
+#bottom{
+    vertical-align: bottom;
+}
+#foot{
+    font-size: 15px;
+}
+@media print {
+
+    body{
+        background-color: none;
+    }
+    .hide
+    {
+        display: none;
+    }
+    /* .cus{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 200px;
+        background-color: none;
+        font-size: large;
+
+        
+    } */
+    /* #table1{
+        width: fit-content;
+        border: none;
+        border-right: none;
+        border-left: none;
+    } */
+}

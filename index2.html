@@ -1,0 +1,214 @@
+<!DOCTYPE htmlH>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newcss.css">
+    </head>
+    <body>
+<center>
+    <div class="hide" id="data" class="container">
+
+            <input type="text"  id="itemtype" placeholder="item variety"  list='item'  width="70px" required>
+            <datalist id='item'>
+                <option value='TOPS' >TOPS</option>
+                <option value='BRACELETS' >BRACELETS</option>
+                <option value='BANGLES' >BANGLES</option>
+                <option value='CHAIN PENDANT' >CHAIN PENDANT</option>
+                <option value='RING' >RING</option>
+                <option value='HATH FOOLS' >HATH FOOLS</option>
+                <option value='MANGAL SUTRA' >MANGAL SUTRA</option>
+                <option value='NATH' >NATH</option>
+                <option value='NECKLACE' >NECKLACE</option>
+                <option value='PENDAL' >PENDAL</option>
+                <option value='PENDAL SET' >PENDAL SET</option>
+                <option value='SARI PIN' >SARI PIN</option>
+                <option value='CHAIN' >CHAIN</option>
+                <option value='TIKA' >TIKA</option>
+               
+            </datalist>
+
+            <input type="number" id="hsn" placeholder="HSN CODE" required>
+            <input type="number" id="qty" placeholder="Quantity" required>
+            <input type="number" id="rate" placeholder="Rate" required>
+        
+            <button id="mybutton" >Add</button>    
+            <!-- onclick="callBothFunction()" -->
+    </div>
+    <div class="hide" id="data" class="container">
+        <table>
+            <tr><th>Customer Name</th><td><input type="text" id="cusname" placeholder="Customer Name" required></td></tr>
+            <tr><th>Address</th><td><input type="text" id="address" placeholder="Address" required></td></tr>
+            <tr><th>STATE</th><td><input type="text"  id="state" placeholder="State"  list='itemstate'  width="70px" required>
+            <datalist id='itemstate'>
+                <option value='Madhya Pradesh' >Madhya Pradesh</option>
+                <option value='Andhra Pradesh' >Andhra Pradesh</option>
+                <option value='Arunachal Pradesh' >Arunachal Pradesh</option>
+                <option value='Assam' >Assam</option>
+                <option value='Bihar' >Bihar</option>
+                <option value='Chhattisgarh' >Chhattisgarh</option>
+                <option value='Gujarat' >Gujarat</option>
+                <option value='Haryana' >Haryana</option>
+                <option value='Himachal Pradesh' >Himachal Pradesh</option>
+                <option value='Jharkhand' >Jharkhand</option>
+                <option value='Karnataka' >Karnataka</option>
+                <option value='Kerala' >Kerala</option>
+                <option value='Maharashtra' >Maharashtra</option>
+                <option value='Manipur' >Manipur</option>
+                <option value='Meghalaya' >Meghalaya</option>
+                <option value='Mizoram' >Mizoram</option>
+                <option value='Nagaland' >Nagaland</option>
+                <option value='Odisha' >Odisha</option>
+                <option value='Punjab' >Punjab</option>
+                <option value='Rajasthan' >Rajasthan</option>
+                <option value='Sikkim' >Sikkim</option>
+                <option value='Tamil Nadu' >Tamil Nadu</option>
+                <option value='Telangana' >Telangana</option>
+                <option value='Tripura' >Tripura</option>
+                <option value='Uttar Pradesh' >Uttar Pradesh</option>
+                <option value='Uttarakhand' >Uttarakhand</option>
+                <option value='Goa' >Goa</option>
+                <option value='West Bengal' >West Bengal</option>
+            </datalist></td></tr>
+            <tr><th>Mobile number</th><td><input type="number" id="mobno" placeholder="Mobile number" required></td></tr>
+            <tr><th>GST number</th><td><input type="text" id="gst" placeholder="GST number" required></td></tr>
+          
+        </table>
+    </div>
+
+</center>
+        <table border="2px" width="50%" align="center">
+            <tr>
+                <th colspan="6">
+            <div>
+                <pre style="font-size:15px"><b style="font-size:28px" >SHUBH SHREE DIAMOND COLLECTION</b>
+<b>13-b, Amrakunj Colony, Airport road, Indore (M.P.)-452005 Call : 9981960470</b>
+A.D., Kundan, Micro, etc... Fancy Jewellery wholesaler</pre>
+            </div>
+                </th>
+                <!-- ए.डी., कुन्दन, माइक्रो की फैन्सी ज्वेलरी के विक्रेता -->
+            </tr> 
+            <tr align="left">
+                <th colspan="2" align="center" class="gst">
+                    <p style="color: red"><b id="GSTIN">GSTIN.: 23BKWPJ5106M1ZS</b></p>
+                </th>
+                <th align="center" class="col2">
+                    Date: 
+                </th>
+                <th align="center" id="datecell">
+                  
+                </th>
+                <th align="center">
+                    Invoice No.:
+                </th>
+                <th align="center" id="invoicenumber">
+                    2425-000
+                </th>
+            </tr>
+            </table>
+            <table border="2px" width="50%" align="center">
+            <tr align="left">
+                <th colspan="1" id="bo1">Name:</th>
+                <th colspan="2" id="pname" ></th>
+                <th colspan="3">Date of Supply:</th>
+            </tr>
+            <tr align="left">
+                <th colspan="1" id="bo3">Address:</th>
+                <th colspan="2" id="paddress"></th>
+                <th colspan="3">Transportation Mode:</th>
+            </tr>
+            <tr align="left">
+                <th colspan="1" id="bo3">State:</th>
+                <th colspan="2" id="pstate"></th>
+                <th colspan="3">Vehicle No.:</th>
+            </tr>
+            <tr align="left">
+                <th colspan="1" id="bo3">Mobile No.:</th>
+                <th colspan="2" id="pmobno"></th>
+                <th colspan="3">Place of Supply:</th>
+            </tr>
+            <tr align="left">
+                <th colspan="1" bo5>GSTIN:</th>
+                <th colspan="2" id="pgst"></th>
+                <th colspan="3"></th>
+            </tr>
+            </table>
+
+            <table id="mytable" border="2px" width="50%" align="center">
+            <tr>
+                <th id="col1">S No.</th>
+                <th id="col2">Description of Goods</th>
+                <th>HSN code</th>
+                <th>Quty.</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+            
+            </table>
+
+            <table border="2px" width="50%" align="center">
+            <tr>
+                <th colspan="3" class="compress"></th>
+                <th colspan="2" align="right" class="compress1">P/F Charges</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th colspan="3" class="compress"></th>
+                <th colspan="2" align="right" class="compress1">Total Amount Before Tax</th>
+                <th style="color: blue" id="total"></th>
+            </tr>
+            <tr>
+                <th colspan="3" class="compress"></th>
+                <th colspan="2" align="right" class="compress1">Add : CGST @ 1.5%</th>
+                <th id="cgst"></th>
+            </tr>
+            <tr>
+                <th colspan="3" class="compress"></th>
+                <th colspan="2" align="right" class="compress1">Add : SGST @ 1.5%</th>
+                <th id="sgst"></th>
+            </tr>
+            <tr>
+                <th colspan="3" class="compress"></th>
+                <th colspan="2" align="right" class="compress1">Add : IGST @ 3%</th>
+                <th id="igst"></th>
+            </tr>
+            <tr>
+                <th colspan="3" align="left" id="gtotalinwords" class="compress"> </th>
+                <th colspan="2" align="right" class="compress1">Total Amount After Tax</th>
+                <th style="color: red" id="grandtotal"></th>
+            </tr>
+            <tr>
+                <th colspan="3" class="compress"><b>BANK:- KOTAK MAHINDRA BANK - Account No.:- 6146093555 IFSC:- KKBK0005942</b></th>
+                <th colspan="2" align="right" class="compress1">GST On Revenue Charge</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th id="foot" colspan="3" align="left" class="compress">
+Declaration: We Declare that this Invoice shows the actual price Of the 
+goods described and that all particulars are true and correct.
+<b>Terms & Conditions:*</b> Subject to Indore Jurisdiction. * E. & O. E.</th>
+            
+                <th id="bottom" colspan="3" align="right">For: <b>SHUBH SHREE DIAMOND COLLECTION</b></th>
+            </tr>
+        </table>
+        <script src="taxinvoice.js"></script>
+    </body>
+<center> <button class="hide" onclick="printFun()" align="center" style="color: blue; background-color: chartreuse;">Print</button> </center>
+</html>
+
+
+
+<!-- 
+    pending work 
+   -> invoice number 
+   -> grand total in words 
+   -> save pdf
+   -> print 
+
+ -->
