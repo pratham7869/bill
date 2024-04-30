@@ -115,5 +115,16 @@ table.innerHTML += template;
 function deleteRow(btn) {
     var row = btn.parentNode.parentNode;
     row.parentNode.removeChild(row);
-}
+    updateSerialNumbers();
+    calculateTotal()
+   
 
+
+}
+function updateSerialNumbers() {
+    var table = document.getElementById('mytable'); 
+    var rows = table.rows;
+    for (var i = 1; i < rows.length; i++) {
+        rows[i].cells[0].innerText = i; // Update serial number
+    }
+}
