@@ -31,7 +31,7 @@ let invnumber = localStorage.getItem('invoiceNumber');
 if (!invnumber) {
     invnumber = 1;
 }
-document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber)); // changes
+document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber+1)); // changes
 
 //   ....
 function callBothFunction() {
@@ -115,7 +115,7 @@ function generateInvoice() {
     if (!invoiceNumber) {
         invoiceNumber = 1;
     } else {
-        invoiceNumber = parseInt(invoiceNumber) ;  // change 1 
+        invoiceNumber = parseInt(invoiceNumber+1) ;  // change 1 
     }
     document.getElementById('invoicenumber').innerText ="2425-00" + invoiceNumber;
     localStorage.setItem('invoiceNumber', invoiceNumber);
