@@ -31,7 +31,7 @@ let invnumber = localStorage.getItem('invoiceNumber');
 if (!invnumber) {
     invnumber = 1;
 }
-document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber)+1); // changes
+document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber)+1); // changes of 1 
 
 //   ....
 function callBothFunction() {
@@ -115,9 +115,9 @@ function generateInvoice() {
     if (!invoiceNumber) {
         invoiceNumber = 1;
     } else {
-        invoiceNumber = parseInt(invoiceNumber)+1 ;  // change 1 
+        invoiceNumber = parseInt(invoiceNumber) ;  // change 1 
     }
-    document.getElementById('invoicenumber').innerText ="2425-00" + invoiceNumber;
+    document.getElementById('invoicenumber').innerText ="2425-00" + invoiceNumber+1;
     localStorage.setItem('invoiceNumber', invoiceNumber);
     
     // You can use the invoice number here to do whatever you need
