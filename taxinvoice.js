@@ -31,7 +31,7 @@ let invnumber = localStorage.getItem('invoiceNumber');
 if (!invnumber) {
     invnumber = 1;
 }
-document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber)+1); // changes of 1 
+document.getElementById('invoicenumber').innerText ="2425-00" + (parseInt(invnumber)); // changes of 1 
 
 //   ....
 function callBothFunction() {
@@ -117,8 +117,8 @@ function generateInvoice() {
     } else {
         invoiceNumber = parseInt(invoiceNumber) ;  // change 1 
     }
-    document.getElementById('invoicenumber').innerText ="2425-00" + invoiceNumber+1;
-    localStorage.setItem('invoiceNumber', invoiceNumber);
+    document.getElementById('invoicenumber').innerText ="2425-00" + invoiceNumber;
+    localStorage.setItem('invoiceNumber', invoiceNumber+1);
     
     // You can use the invoice number here to do whatever you need
     alert("NEW BILL NUMBER IS 2425-00" + invoiceNumber);
